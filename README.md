@@ -11,7 +11,7 @@ npm里找到npmrc 打开添加registry=https：//registry.npm.taobao.org 配置�
 到镜像服务器里下载依赖工具包，就可以大大提高初始化速度
 7. 这时候直接运行会有个坑，会报android ReactNative之Cannot find entry file index.android.js in any of the roots错误，在react native以前的版本，index.android.js与index.ios.js是分开的两个文件
 、在最新版本中这两个文件合并成index.js一个文件了，报错原因在根目录没找到两文件
-解决方法：
-创建目录：mkdir android\app\src\main\assets
-创建两个文件 npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
+ 解决方法： 
+ 创建目录：mkdir android\app\src\main\assets
+ 创建两个文件 npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output         android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
 这时候再运行就不报错了
