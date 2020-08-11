@@ -15,4 +15,4 @@ npm里找到npmrc 打开添加registry=https：//registry.npm.taobao.org （http
  创建目录：mkdir android\app\src\main\assets之前记得cd AwesomeProject目录下
  创建两个文件 npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output         android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
 这时候再运行就不报错了
-9.运行项目如果报错记得重新安装jdk，可能路径配置不对。
+9.  运行项目如果报错记得重新安装jdk，可能路径配置不对。
