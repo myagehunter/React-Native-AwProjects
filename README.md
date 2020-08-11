@@ -16,3 +16,22 @@ npm里找到npmrc 打开添加registry=https：//registry.npm.taobao.org （http
  创建两个文件 npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output         android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
 这时候再运行就不报错了
 9.  运行项目如果报错记得重新安装jdk，可能路径配置不对。
+10.在使用yarn react-native start 时报
+error listen EADDRINUSE: address already in use :::8081. Run CLI with --verbose flag for more details.
+Error: listen EADDRINUSE: address already in use :::8081
+这种错误是端口占用netstat -ano 列出端口对应listen之后
+tskill 2348 这样杀死端口
+11.当react-native run-android也出现如下错误时候都是端口占用，改成yarn react-native run-android --port 8081可解决（https://www.jianshu.com/p/481f7ec546ba）
+error listen EADDRINUSE: address already in use :::8081. Run CLI with --verbose flag for more details.
+Error: listen EADDRINUSE: address already in use :::8081
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1447:7)
+    at F:\rn\AwesomeProject\node_modules\metro\src\index.js:235:20
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (F:\rn\AwesomeProject\node_modules\metro\src\index.js:234:14)
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (F:\rn\AwesomeProject\node_modules\metro\src\index.js:46:24)
+    at _next (F:\rn\AwesomeProject\node_modules\metro\src\index.js:66:9)
+error Command failed with exit code 1.
+ 
