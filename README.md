@@ -35,3 +35,6 @@ Error: listen EADDRINUSE: address already in use :::8081
     at _next (F:\rn\AwesomeProject\node_modules\metro\src\index.js:66:9)
 error Command failed with exit code 1.
  
+ 
+ https://blog.csdn.net/u013282737/article/details/84790736
+ 
